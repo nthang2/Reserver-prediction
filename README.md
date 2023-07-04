@@ -22,25 +22,78 @@ The "Hotel Reservation.csv" dataset contains 36275 rows and 19 columns. Each row
 
 ## 2. Analysis
 
-### 2.1 Data Exploration
-
-### 2.2 Exploratory Visualization
-
 ![Fig. 1: Variables Correlation table](images/var_correlation.png)
 Fig. 1: Variables Correlation table
 
-![Fig. 1: Variables Correlation table](images/var2.png)
-Fig. 2
+### 2.1 Data Exploration (Work in progress)
 
-![Fig. 1: Variables Correlation table](images/var3.png)
-Fig. 3
+**Categorical Variables**
 
-![Fig. 1: Variables Correlation table](images/var4.png)
-Fig. 4
+The analysis of categorical variables provides insights into the booking preferences and patterns of the hotel's guests.
 
-### 2.3 Algorithms and Techniques
+- **Rooms**: The majority of reservations are made for rooms with two adults and without children.
 
-### 2.4 Benchmark
+- **Booking Duration**: Reservations are primarily short-term, with fewer long-term bookings.
+
+- **Meal Plan and Car Space**: Most guests select Meal Plan 1 and do not require a car space.
+
+- **Room Types**: The most frequently booked room types are Types 1 and 4.
+
+- **Booking Year**: The data predominantly corresponds to bookings made in 2018.
+
+- **Bookings by Month**: There is a gradual increase in bookings from January to October, followed by a drop in November and December.
+
+- **Booking Method**: The majority of bookings are made online.
+
+- **Guests' History**: Guests who have never been to the hotel and have never canceled a booking are more likely to make reservations.
+
+- **Special Requests**: The available data decreases as the number of special requests increases.
+
+- **Cancellation Rate**: Approximately 65% of reservations have not been canceled.
+
+**Continuous Variables**
+
+Analyzing continuous variables helps understand the numerical aspects of the booking data.
+
+- **Lead Time**: Reservations are generally made without significant delays.
+
+- **Lead Time and Reservations**: The longer the lead time, the lower the number of reservations.
+
+- **Average Room Price**: The average price of a room is around 100 euros.
+
+- **Cancellation History**: Guests typically have not canceled bookings before.
+
+**Bivariate Analysis: Relationship with Categorical Variables**
+
+By examining the relationship between categorical variables and the likelihood of cancellation, several patterns emerge:
+
+- **Parking Space and Previous Stay**: Guests who request a parking space or have stayed previously at the hotel are less likely to cancel their reservations.
+
+- **Special Requests**: Guests who request special requests are also less likely to cancel. Moreover, as the number of special requests increases, the likelihood of cancellation decreases.
+
+- **Lead Time**: The lead time, or the time between booking and check-in, shows a consistent relationship with the likelihood of cancellation across various categorical variables:
+  - Guests requesting a parking space or those who have stayed before tend to have shorter lead times.
+  - Guests with longer stays (3 or 4 nights) generally have longer lead times.
+  - Guests with Meal Plan 2 exhibit higher lead times.
+  - Different room types have varying lead times.
+  - As the number of special requests increases, the lead time tends to decrease.
+  - Guests who are already familiar with the hotel tend to have lower lead times.
+
+- **Cancellations and Room Prices**: Higher-priced rooms tend to have a higher number of cancellations, and this pattern remains consistent throughout the year.
+
+**Other Insights**
+
+- Lead time tends to be shorter at the beginning and end of the year.
+
+- Guests who have previously canceled their bookings and guests who have not stayed at the hotel before follow similar patterns, with shorter lead times.
+
+- Higher lead time corresponds to higher prices for cancellations.
+
+These findings provide valuable insights into the relationship between categorical and continuous variables, shedding light on the preferences, behavior, and trends of the hotel's guests.
+
+### 2.2 Algorithms and Techniques
+
+### 2.3 Benchmark
 
 ## 3. Methodology
 
