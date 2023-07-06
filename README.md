@@ -282,9 +282,36 @@ We evaluated the model's performance using various metrics, including precision,
 
 The Random Forest algorithm produces such results due to its ability to leverage the diversity of multiple decision trees. By combining predictions from different trees and considering a variety of features and thresholds, Random Forest can capture complex relationships within the data and make accurate predictions. Furthermore, the randomness introduced in the training process, such as bootstrap sampling and feature subsampling, helps to reduce overfitting and improve the model's generalization capability, which are applied by default in the skit-learn library.
 
-This model demonstrates excellent accuracy, balanced performance across both classes, and robustness against overfitting.
-
 ***Overall accuracy : 94%***
+
+### 5, Extra trees
+
+In this section, we implemented the Extra Trees algorithm, which is another ensemble learning method based on decision trees. Similar to Random Forest, Extra Trees combines multiple decision trees to make predictions. However, it differs from Random Forest in the way it constructs the trees and handles the randomness.
+
+
+![Fig. 19](images/ex_tree_hyper.png) 
+
+Fig. 19: Extra Trees Hyperparameters
+
+We experimented with various hyperparameters to find the optimal configuration for our dataset. The hyperparameters considered for Extra Trees include the number of trees (n_estimators), the minimum number of samples required to split an internal node (min_samples_split), the maximum depth of the trees (max_depth), the criterion to measure the quality of a split (criterion), and the random seed (random_state).
+
+After conducting thorough experimentation, we determined that the best configuration for our dataset is as follows: n_estimators=200, min_samples_split=2, max_depth=30, criterion='entropy', and random_state=0. These hyperparameters provided the best results in terms of overall accuracy and balanced performance across both classes.
+
+The Extra Trees model achieved an accuracy of 95% on the test/validation data. This high accuracy indicates that the model performs well in predicting the target variable for unseen instances.
+
+![Fig. 20](images/ex_tree_matrix.png) 
+
+Fig. 20: Confusion matrix
+
+![Fig. 21](images/ex_tree_perf.png) 
+
+Fig. 21: Performance
+
+We evaluated the model's performance using various metrics, including precision, recall, and F1-score, for each class. The F1-scores for both classes were 0.94, indicating high performance in predicting instances from each class. The precision and recall scores were also balanced, further supporting the model's effectiveness in capturing instances from both classes.
+
+The Extra Trees algorithm achieves such results by leveraging the diversity of multiple decision trees. It constructs each tree using random subsets of features and random thresholds, making the algorithm less sensitive to noisy features and improving its generalization capability. Additionally, skit-learn also employs bootstrap sampling by default, which further introduces randomness in the training process and helps prevent overfitting.
+
+***Overall accuracy: 94%***
 
 ### 7, Neural Network
 In this section, we employed a neural network (ANN) to address our problem. The neural network is inspired by biological neural networks in the human brain and consists of interconnected artificial neurons that process and learn from data.
