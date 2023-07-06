@@ -217,6 +217,7 @@ After testing different parameters for priors and var_smoothing, we decided to u
 The Naive Bayes Gaussian model calculates the likelihood of a data point belonging to a particular class by estimating the probability density function (PDF) of each feature given the class. It then combines these likelihoods with the prior probabilities of the classes to make predictions.
 
 The model's accuracy on the training data was 0.748, while the accuracy on the test/validation data was 0.744. Comparing these accuracy scores, it seems that the model is not overfitting as the accuracy on the training data is relatively similar to the accuracy on the test/validation data.
+
 ![Fig. 11](images/gauss_matrix.png) 
 
 Fig. 11: Confusion matrix
