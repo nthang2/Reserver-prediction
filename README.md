@@ -27,7 +27,7 @@ Fig. 1: Variables Correlation table
 
 The table indicates that there are minimal correlations among the variables, except for the relationship between repeated_guests and their previous bookings, which is likely attributed to scheduling delays.
 
-### 2.1 Data Exploration (Work in progress)
+### 2.1 Data Exploration
 
 **Categorical Variables**
 
@@ -63,6 +63,9 @@ Fig. 3: Booking preferences 2
 
 Analyzing continuous variables helps understand the numerical aspects of the booking data.
 
+![Fig. 4: Booking preferences 4](images/var3.png)
+Fig. 4: Booking preferences 4
+
 - **Lead Time**: Reservations are generally made without significant delays.
 
 - **Lead Time and Reservations**: The longer the lead time, the lower the number of reservations.
@@ -70,6 +73,12 @@ Analyzing continuous variables helps understand the numerical aspects of the boo
 - **Average Room Price**: The average price of a room is around 100 euros.
 
 - **Cancellation History**: Guests typically have not canceled bookings before.
+
+![Image 1](images/boxplot1.png)
+![Image 2](images/boxplot2.png)
+Fig. 5: Outliners
+
+The boxplots reveal the presence of outliers in both the **Lead Time** and **Average Room Price** variables, which will be addressed during the data cleaning process.
 
 **Bivariate Analysis: Relationship with Categorical Variables**
 
