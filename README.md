@@ -72,25 +72,18 @@ Fig. 4: Booking preferences 4
 
 - **Cancellation History**: Guests typically have not canceled bookings before.
 
-![Image 1](images/boxplot1.png)
-![Image 2](images/boxplot2.png)
-
-Fig. 5: Outliers
-
-The boxplots reveal the presence of outliers in both the **Lead Time** and **Average Room Price** variables, which will be addressed during the data cleaning process.
-
 ### **Bivariate Analysis: Relationship with Variables**
 
 By examining the relationship between categorical variables and the likelihood of cancellation, several patterns emerge:
 
-![Fig. 6](images/bivariate%20analysis.png) 
-![Fig. 6](images/bivariate%20analysis%202.png)
-![Fig. 6](images/bivariate%20analysis%203.png) 
-![Fig. 6](images/bivariate%20analysis%204.png) 
-![Fig. 6](images/bivariate%20analysis%205.png)
-![Fig. 6](images/bivariate%20analysis%206.png) 
+![Fig. 5](images/bivariate%20analysis.png) 
+![Fig. 5](images/bivariate%20analysis%202.png)
+![Fig. 5](images/bivariate%20analysis%203.png) 
+![Fig. 5](images/bivariate%20analysis%204.png) 
+![Fig. 5](images/bivariate%20analysis%205.png)
+![Fig. 5](images/bivariate%20analysis%206.png) 
 
-Fig. 6: Booking preferences and cancellation
+Fig. 5: Booking preferences and cancellation
 
 - **Parking Space and Previous Stay**: Guests who request a parking space or have stayed previously at the hotel are less likely to cancel their reservations.
 
