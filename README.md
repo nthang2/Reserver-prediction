@@ -351,16 +351,35 @@ By training the neural network with 100 epochs and a reduced learning rate of 0.
 
 ***Overall accuracy : 87.87%***
 
-# 4. Results
+# 4. Evaluation
 
-## 4.1 Model Evaluation and Validation
+Chi-square test
 
-## 4.2 Justification
+The chi-square test compares the observed frequencies of variables with the expected frequencies to assess whether the observed frequencies deviate significantly from what would be expected by chance.The goal of this test is to identify whether a disparity between actual and predicted data is due to chance or to a link between the variables under consideration. As a result, the chi-square test is an ideal choice for aiding in our understanding and interpretation of the connection between our two categorical variables.
 
-# 5. Conclusion
+Applying this method, we createe an instance of the SelectKBest class with the score_func parameter set to chi2, which indicates that the chi-squared statistic will be used as the scoring function to evaluate the importance of each feature.The fit method is called on the SelectKBest object, passing in the features and target variables as arguments. This calculates the chi-squared scores for each feature based on their relationship with the target variable.
 
-## 5.1 Free-Form Visualization
+![chi](images/chi_score.png) 
 
-## 5.2 Reflection
+The results so us that: The 'lead_time' feature has the highest chi-squared score of 797722.63, indicating a strong relationship or association with the target variable. This suggests that the lead time before making a reservation is an important factor in predicting the outcome.
 
-## 5.3 Improvement
+The 'avg_price_per_room' feature has a relatively high chi-squared score of 12869.91, suggesting that it has a significant association with the target variable. This implies that the average price per room has predictive power in determining the outcome.
+
+The 'no_of_special_requests', 'repeated_guest', and 'required_car_parking_space' features also have relatively high chi-squared scores, indicating their importance in predicting the outcome.
+
+The 'arrival_year' feature has the lowest chi-squared score of 0.13, suggesting a weak association with the target variable. This indicates that the year of arrival alone might not be a strong predictor of the outcome.
+
+The 'arrival_date' and 'arrival_month' features have relatively low chi-squared scores compared to other features. While they may still carry some predictive information, their importance might be less significant compared to other features.
+Conclusion
+
+Upon examining our data, we can observe that all the variables are numerical and continuous. Fortunately, our database contains a substantial amount of data, which simplifies our work. Furthermore, a thorough inspection reveals that we have no null values, and therefore no data treatment is required.
+
+When considering correlations among the variables, we find that there is no strong correlation present. During our Exploratory Analysis, we did identify some outliers, but these did not impact the development of our model. Interestingly, we have noticed certain patterns in relation to reservations. Typically, most of the data follows a particular reservation pattern. Additionally, when examining our target variable, which distinguishes between canceled and non-canceled reservations, we have discovered some noteworthy patterns. Notably, the lead_time variable appears to be highly influential, as reservations with a longer lead time are more prone to cancellation. We have also uncovered other interesting insights, such as guests who have previously stayed and those who request specific amenities, like a car space or special accommodations, being less likely to cancel their reservations.
+
+Analyzing the lead_time variable further, we observe a similar pattern to the target variable. Generally, reservations that were not canceled tend to have a shorter lead time. However, there are some specificities worth mentioning. For instance, during the first three and last three months of the year, the lead time tends to be shorter. Additionally, guests who order a specific type of food tend to have a longer lead time. Furthermore, when comparing the lead_time variable with the average cost of the room, we find that reservations with higher room prices and longer lead times are more inclined towards cancellation.
+
+Regarding the machine learning models, we encountered an imbalance in the classes, as we have significantly more non-cancellation data compared to cancellations. To address this, we utilized oversampling techniques. Upon running the models, we observed a mix of subpar and exceptional performance. The best-performing model was the Random Forest model, which achieved an accuracy of 93.74% and was able to predict both cancellation and non-cancellation results effectively.
+
+In terms of the most important variables for our machine learning models, the lead_time variable proved to be the most influential, followed by average room price and the number of special requests. This finding aligns with our earlier suspicions and is further validated by our data analysis
+
+![end](images/end_table.png) 
