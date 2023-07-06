@@ -25,11 +25,16 @@ The "Hotel Reservation.csv" dataset contains 36275 rows and 19 columns. Each row
 ![Fig. 1: Variables Correlation table](images/var_correlation.png)
 Fig. 1: Variables Correlation table
 
+The table indicates that there are minimal correlations among the variables, except for the relationship between repeated_guests and their previous bookings, which is likely attributed to scheduling delays.
+
 ### 2.1 Data Exploration (Work in progress)
 
 **Categorical Variables**
 
 The analysis of categorical variables provides insights into the booking preferences and patterns of the hotel's guests.
+
+![Fig. 2: Booking preferences 1](images/var2.png)
+Fig. 2: Booking preferences 1
 
 - **Rooms**: The majority of reservations are made for rooms with two adults and without children.
 
@@ -40,6 +45,9 @@ The analysis of categorical variables provides insights into the booking prefere
 - **Room Types**: The most frequently booked room types are Types 1 and 4.
 
 - **Booking Year**: The data predominantly corresponds to bookings made in 2018.
+
+![Fig. 3: Booking preferences 2](images/var3.png)
+Fig. 3: Booking preferences 2
 
 - **Bookings by Month**: There is a gradual increase in bookings from January to October, followed by a drop in November and December.
 
