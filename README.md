@@ -1,3 +1,8 @@
+# Thành viên
+- | Nguyễn Huy Hoàng | 20214959 | 
+- | Nguyễn Nhật Minh | 20210582 | 
+- |Bùi Nguyễn Quang Huy| 20210436 |
+
 # 1. Introduction
 
 ## 1.1 Background
