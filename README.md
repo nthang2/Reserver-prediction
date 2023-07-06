@@ -75,7 +75,7 @@ Fig. 4: Booking preferences 4
 ![Image 1](images/boxplot1.png)
 ![Image 2](images/boxplot2.png)
 
-Fig. 5: Outliners
+Fig. 5: Outliers
 
 The boxplots reveal the presence of outliers in both the **Lead Time** and **Average Room Price** variables, which will be addressed during the data cleaning process.
 
@@ -123,6 +123,26 @@ These findings provide valuable insights into the relationship between categoric
 # 3. Methodology
 
 ## 3.1 Data Preprocessing
+
+In this section, we will describe the steps taken to preprocess the data for machine learning models. The preprocessing steps include removing irrelevant features, encoding categorical variables, balancing the classes, scaling the data, and splitting it into training and testing sets.
+
+- **Feature Removal**:
+The *'Booking_ID'* feature is removed from the dataset as it does not provide any meaningful information for predicting the booking status.
+
+- **Label Encoding**:
+Categorical variables in the dataset are encoded into numeric form using the LabelEncoder from the scikit-learn library. This transformation allows the machine learning models to work with categorical data.
+
+- **Class Balancing**:
+As the dataset may have imbalanced classes, where one class has significantly more instances than the others, we apply oversampling using the RandomOverSampler from the imbalanced-learn library. This technique increases the number of instances in the minority class to achieve a balanced representation.
+
+![Fig. 7](images/balanced_status.png) 
+Fig.7: Post-balancing booking statuses
+
+- **Data Scaling**:
+To ensure that all features are on a similar scale and prevent any particular feature from dominating the learning process, we apply standard scaling using the StandardScaler from the scikit-learn library. This transformation standardizes the features to have zero mean and unit variance.
+
+- **Data Split**:
+The preprocessed data is split into training and testing sets using the train_test_split function from the scikit-learn library. We allocate 30% of the data for testing, while the remaining 70% is used for training the machine learning models.
 
 ## 3.2 Implementation
 
