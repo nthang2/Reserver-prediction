@@ -150,9 +150,9 @@ Categorical variables in the dataset are encoded into numeric form using the Lab
 - **Class Balancing**:
 As the dataset may have imbalanced classes, where one class has significantly more instances than the others, we apply oversampling using the RandomOverSampler from the imbalanced-learn library. This technique increases the number of instances in the minority class to achieve a balanced representation.
 
-![Fig. 7](images/balanced_status.png) 
+![Fig. 6](images/balanced_status.png) 
 
-Fig.7: Post-balancing booking statuses
+Fig.6: Post-balancing booking statuses
 
 - **Data Scaling**:
 To ensure that all features are on a similar scale and prevent any particular feature from dominating the learning process, we apply standard scaling using the StandardScaler from the scikit-learn library. This transformation standardizes the features to have zero mean and unit variance.
@@ -161,6 +161,46 @@ To ensure that all features are on a similar scale and prevent any particular fe
 The preprocessed data is split into training and testing sets using the train_test_split function from the scikit-learn library. We allocate 30% of the data for testing, while the remaining 70% is used for training the machine learning models.
 
 ## 3.2 Implementation
+
+### 1, K-NN
+
+In this implementation, the K-Neighbors model was used to classify the data. The value of k determines the number of neighbors considered in the classification decision.
+
+To ensure optimal performance on unseen data, we evaluate the model's performance using the cross-validation technique.
+
+As the value of k increases, both the training accuracy and validation accuracy tend to decrease slightly. This can be attributed to the fact that increasing the number of neighbors introduces more noise or mislabeled points from the training set, affecting the model's performance.
+
+The model achieved the highest training accuracy of 0.9929 for k = 1. However, the validation accuracy for this value of k is slightly lower at 0.8734, indicating a possible overfitting situation. Overfitting occurs when a model performs exceptionally well on the training dataset but struggles to generalize to unseen data.
+
+The validation accuracy stabilizes after k = 4, with slight fluctuations in subsequent values. This suggests that a range of k values around 4 could be considered for potential model selection, as they provide reasonably good performance without overfitting to the training data.
+
+The following are the training and validation accuracies for different values of k:
+
+  For k = 1: Training Accuracy = 0.9929, Validation Accuracy = 0.8734
+  For k = 2: Training Accuracy = 0.9123, Validation Accuracy = 0.8236
+  For k = 3: Training Accuracy = 0.9156, Validation Accuracy = 0.8209
+  For k = 4: Training Accuracy = 0.8745, Validation Accuracy = 0.7975
+  For k = 5: Training Accuracy = 0.8722, Validation Accuracy = 0.7986
+  For k = 6: Training Accuracy = 0.8513, Validation Accuracy = 0.7865
+  For k = 7: Training Accuracy = 0.8493, Validation Accuracy = 0.7897
+  For k = 8: Training Accuracy = 0.8365, Validation Accuracy = 0.7802
+  For k = 9: Training Accuracy = 0.8342, Validation Accuracy = 0.7793
+
+![Fig. 7](images/knn_matix.png) 
+
+Fig. 7: K-NN Confusion matrix
+
+![Fig. 8](images/knn_result.png) 
+
+Fig. 8: K-NN performance
+
+**NOTE**: reservation cancelled - denoted by class 0, not cancelled, denoted by class 1
+
+The precision, recall, and F1-score were calculated to evaluate the model's performance. The precision for class 0 was 0.80, indicating that 80% of the predictions for class 0 were correct. The precision for class 1 was 0.85, indicating that 85% of the predictions for class 1 were correct. The recall for class 0 was 0.86, indicating that 86% of the actual instances of class 0 were correctly predicted. The recall for class 1 was 0.78, indicating that 78% of the actual instances of class 1 were correctly predicted. The F1-score, which combines precision and recall, was 0.83 for class 0 and 0.81 for class 1. The overall accuracy of the model was 0.82, indicating that 82% of the predictionswere correct.
+
+Based on the results obtained, the model appears to perform reasonably well. After considering the training and validation accuracies, as well as the precision, recall, F1-score, and overall accuracy, a value of k = 3 was chosen for the K-Neighbors model. This value provides a good balance between performance and potential overfitting.
+
+***Overall accuracy : 82%***
 
 ## 3.3 Refinement
 
