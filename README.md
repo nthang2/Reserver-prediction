@@ -120,23 +120,27 @@ These findings provide valuable insights into the relationship between categoric
 
 In our machine learning project on hotel reservation prediction, we experimented with seven different models: K Neighbors, Naive Bayes - Gaussian, Decision Tree, Random Forest, Extra Trees, Gradient Boosting, and Neural Network. Each of these models employs a unique algorithm or technique to make predictions based on the input data.
 
-K Neighbors: This algorithm predicts the class of a data point by considering the class labels of its nearest neighbors. The number of neighbors to consider is determined by the value of 'K' specified by the user.
+- **K Neighbors**: This algorithm predicts the class of a data point by considering the class labels of its nearest neighbors. The number of neighbors to consider is determined by the value of 'k'. **Speed**: moderate, **Accuracy**: high
 
-Naive Bayes - Gaussian: This algorithm is based on Bayes' theorem and assumes that the features are conditionally independent. It uses the Gaussian distribution to model the likelihood of each feature given the class labels.
+- **Naive Bayes - Gaussian**: This algorithm is based on Bayes' theorem and assumes that the features are conditionally independent. It uses the Gaussian distribution to model the likelihood of each feature given the class labels. **Speed**: fast, **Accuracy**: moderate
 
-Decision Tree: Decision trees partition the feature space based on a series of binary decisions. Each internal node represents a test on a specific feature, while each leaf node represents a class label. The decision tree algorithm learns an optimal tree structure from the training data.
+- **Decision Tree**: Decision trees partition the feature space based on a series of binary decisions. Each internal node represents a test on a specific feature, while each leaf node represents a class label. The decision tree algorithm learns an optimal tree structure from the training data. **Speed**: fast, **Accuracy**: moderate to high
 
-Random Forest: Random Forest is an ensemble learning method that combines multiple decision trees. It creates a set of decision trees on random subsets of the training data and makes predictions by averaging the outputs of individual trees.
+- **Random Forest**: Random Forest is an ensemble learning method that combines multiple decision trees. It creates a set of decision trees on random subsets of the training data and makes predictions by averaging the outputs of individual trees. **Speed**: moderate, **Accuracy**: high
 
-Extra Trees: Extra Trees, similar to Random Forest, is an ensemble learning method that combines multiple decision trees. However, it further randomizes the tree construction process by selecting random splits at each node, aiming to increase diversity among the trees.
+- **Extra Trees**: Extra Trees, similar to Random Forest, is an ensemble learning method that combines multiple decision trees. However, it further randomizes the tree construction process by selecting random splits at each node, aiming to increase diversity among the trees. **Speed**: moderate to fast, **Accuracy**: high
 
-Gradient Boosting: Gradient Boosting is an iterative ensemble method that builds a strong predictive model by sequentially adding weak models. Each weak model is trained to correct the mistakes made by the previous models, focusing on the instances that were misclassified.
+- **Gradient Boosting**: Gradient Boosting is an iterative ensemble method that builds a strong predictive model by sequentially adding weak models. Each weak model is trained to correct the mistakes made by the previous models, focusing on the instances that were misclassified. **Speed**: moderate to slow, **Accuracy**: high
 
-Neural Network: Neural networks are a class of models inspired by the structure and functioning of biological neural networks. They consist of interconnected layers of artificial neurons that process input data and learn to make predictions through a process called backpropagation.
+- **Neural Network**: Neural networks are a class of models inspired by the structure and functioning of biological neural networks. They consist of interconnected layers of artificial neurons that process input data and learn to make predictions through a process called backpropagation. **Speed**: moderate to slow, **Accuracy**: high
 
-## 2.3 Benchmark (WIP)
+## 2.3 Benchmark
 
-The data set was split into a test set and a training set, at the ratio of 30/70. 
+To evaluate the performance of our models in predicting hotel reservation cancellations, we followed a standard practice of splitting the dataset into a training set and a test set. The dataset was divided at a ratio of 70% for training and 30% for testing. This splitting strategy ensures that the models are trained on a substantial amount of data while also allowing us to assess their performance on unseen data.
+
+We employed the scikit-learn library to calculate the accuracy score and create a confusion matrix for evaluating the models. The accuracy score measures the proportion of correctly predicted cancellations or non-cancellations out of the total predictions. It provides an overall assessment of the model's predictive accuracy.
+
+Additionally, we utilized a confusion matrix to gain a more detailed understanding of the model's performance. The confusion matrix presents a tabular representation of predicted and actual classes, showing the true positive, true negative, false positive , and false negative values. This matrix allows us to calculate various evaluation metrics such as precision, recall, and F1 score and determine which model excels at predicting hotel reservation cancellations.
 
 # 3. Methodology
 
