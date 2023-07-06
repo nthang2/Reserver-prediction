@@ -261,10 +261,10 @@ In this section, we employed a neural network (ANN) to address our problem. The 
 
 During training, we initially set the model to train for 200 epochs with a learning rate of 0.01. We observed promising results in terms of training and validation loss up to 100 epochs. However, beyond that point, the loss and accuracy lines began to diverge, indicating overfitting, where the model becomes too specialized in the training data.
 
-To combat overfitting, we decided to stop training early at 100 epochs to prevent the model from memorizing the training data and encourage generalization. Additionally, we reduced the learning rate to 0.001. This adjustment allowed for finer weight adjustments, resulting in slower convergence but potentially greater precision. Lowering the learning rate also improved training stability and reduced the risk of overshooting the optimal solution.
+![Neural_loss](images/neural_loss_old.png) 
+![Neural_acc](images/neural_acc_old.png) 
 
-![Neural_loss](images/neural_loss.png) 
-![Neural_acc](images/neural_acc.png) 
+To combat overfitting, we decided to stop training early at 100 epochs to prevent the model from memorizing the training data and encourage generalization. Additionally, we reduced the learning rate to 0.001. This adjustment allowed for finer weight adjustments, resulting in slower convergence but potentially greater precision. Lowering the learning rate also improved training stability and reduced the risk of overshooting the optimal solution.
 
 By training the neural network with 100 epochs and a reduced learning rate of 0.001, we aimed to strike a balance between convergence speed and precision. This approach helped us capture meaningful patterns from the data while avoiding overfitting and unstable training dynamics.
 
