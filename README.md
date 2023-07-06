@@ -270,7 +270,7 @@ After thorough experimentation, we determined that the best configuration for ou
 
 The Random Forest model achieved an accuracy of 94% on the test/validation data. This high accuracy indicates that the model performs well in predicting the target variable for unseen instances.
 
-![Fig. 17](images/forest_perf.png) 
+![Fig. 17](images/forest_matrix.png) 
 
 Fig. 17: Confusion matrix
 
