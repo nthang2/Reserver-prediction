@@ -308,6 +308,32 @@ The Extra Trees algorithm achieves such results by leveraging the diversity of m
 
 ***Overall accuracy: 94%***
 
+### 6, Gradient Boosting
+
+We explored the application of Gradient Boosting to our dataset due to the limited predictive power of the variable. Gradient Boosting is an ensemble learning technique that combines weak learners, typically decision trees, to create a stronger and more accurate model. This is done by fitting the weak learner to the residuals (the differences between the predicted and actual values) of the previous model. The new weak learner is then combined with the previous models to make predictions
+
+One of the key hyperparameters is the learning rate, which controls the contribution of each weak learner in the ensemble. The learning rate determines the step size at each iteration and affects the speed and accuracy of the model. The experiment involved testing different learning rates, starting from a wide range and narrowing down to identify the best suitable parameter.
+
+We test the learning rate in different scope and narrow down slowly to find the best suitable parameter. The train loss and valid loss values are both relatively low and similar across different learning rates.
+
+![Fig. 21](images/grad_hyper.png) 
+
+Fig. 21: Hyperparameters
+
+During our experimentation, we tuned the hyperparameters of the Gradient Boosting model. We set the hyperparameters as follows: n_estimators = 300, learning_rate = 0.7, and random_state = 0. This configuration yielded promising results.
+
+![Fig. 22](images/grad_matrix.png) 
+
+Fig. 22: Confusion matrix
+
+![Fig. 23](images/grad_perf.png) 
+
+Fig. 23: Performance
+
+The model shows excellent accuracy and balanced performance for both classes, making accurate predictions. The precision values are 0.88 for class 0 and 0.89 for class 1, meaning that 88% and 89% of the predicted instances respectively are correct.
+
+***Overall accuracy: 89%***
+
 ### 7, Neural Network
 In this section, we employed a neural network (ANN) to address our problem. The neural network is inspired by biological neural networks in the human brain and consists of interconnected artificial neurons that process and learn from data.
 
