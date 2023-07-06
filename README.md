@@ -208,12 +208,15 @@ Based on the results obtained, the model appears to perform reasonably well. Aft
 
 ![Fig. 10](images/gauss_smoothing.png) 
 
-Fig. 10: Naive Bayes - Gaussian Model loss/accuracy
+Fig. 10: Hyperparameters smoothing
 
-In this section, we implemented the Naive Bayes algorithm with a Gaussian model. After testing different parameters for priors and var_smoothing, we decided to use priors=[0.01,0.99] and var_smoothing = 1e-6.
+In this section, we implemented the Naive Bayes algorithm with a Gaussian model. Naive Bayes is a probabilistic machine learning algorithm that applies Bayes' theorem with the assumption of independence between the features. The Gaussian model assumes that the features in the dataset follow a Gaussian (normal) distribution.
+
+After testing different parameters for priors and var_smoothing, we decided to use priors=[0.01,0.99] and var_smoothing=1e-6. The priors represent the probability distribution of the classes in the dataset, and var_smoothing is a smoothing parameter that helps prevent numerical instabilities when computing probabilities.
+
+The Naive Bayes Gaussian model calculates the likelihood of a data point belonging to a particular class by estimating the probability density function (PDF) of each feature given the class. It then combines these likelihoods with the prior probabilities of the classes to make predictions.
 
 The model's accuracy on the training data was 0.748, while the accuracy on the test/validation data was 0.744. Comparing these accuracy scores, it seems that the model is not overfitting as the accuracy on the training data is relatively similar to the accuracy on the test/validation data.
-
 ![Fig. 11](images/gauss_matrix.png) 
 
 Fig. 11: Confusion matrix
@@ -224,7 +227,7 @@ Fig. 12: Performace
 
 Regarding the metrics, we evaluated the model's performance for each class as well as an overall average (macro avg and weighted avg) across all classes. The precision, recall, and F1-score were relatively similar for both classes, indicating a balanced performance. However, the overall accuracy of 0.74 suggests that the model is correctly predicting approximately 74% of the instances in the dataset.
 
-## 3.3 Refinement
+***Overall accuracy : 74%***
 
 # 4. Results
 
