@@ -1,5 +1,3 @@
-![Template guide](https://github.com/udacity/machine-learning/blob/master/projects/capstone/capstone_report_template.md)
-
 # 1. Introduction
 
 ## 1.1 Background
@@ -229,6 +227,28 @@ Fig. 12: Performace
 Regarding the metrics, we evaluated the model's performance for each class as well as an overall average (macro avg and weighted avg) across all classes. The precision, recall, and F1-score were relatively similar for both classes, indicating a balanced performance. However, the overall accuracy of 0.74 suggests that the model is correctly predicting approximately 74% of the instances in the dataset.
 
 ***Overall accuracy : 74%***
+
+### 3, Decision Tree
+
+In this section, we implemented the Decision Tree algorithm with two different calculations for splitting: Entropy and Gini. Decision Tree is a versatile machine learning algorithm that builds a tree-like model to make decisions based on feature values. The algorithm recursively splits the data based on selected features and thresholds, aiming to maximize information gain or impurity reduction.
+
+![Fig. 13](images/tree_hyper.png) 
+
+Fig. 13: Decision Tree Hyperparameters
+
+After experimenting with different hyperparameters such as criterion, min_samples_split, and max_depth, we have determined that the best configuration for our dataset is to use criterion='gini', min_samples_split=2, and max_depth=25. The criterion parameter defines the function to measure the quality of a split, and 'gini' calculates the Gini impurity. Min_samples_split determines the minimum number of samples required to split an internal node, and in our case, we found that a value of 2 yielded the best results. Additionally, setting max_depth to 25 limits the depth of the decision tree to prevent overfitting.
+
+The decision tree model achieved an accuracy of 0.91 on the training data and 0.91 on the test/validation data. The similarity between these accuracy scores suggests that the model is not overfitting, as it performs consistently on both the training and test datasets.
+
+![Fig. 14](images/tree_matrix.png) 
+
+Fig. 14: Confusion matrix
+
+![Fig. 15](images/tree_perf.png) 
+
+Fig. 15: Performance
+
+We evaluated the model's performance using various metrics, including precision, recall, and F1-score, for each class, as well as macro average and weighted average across all classes. The macro average and weighted average F1-scores were both 0.91, indicating consistent performance across classes and accounting for class imbalances. The precision and recall scores were also balanced for both classes, suggesting that the model performs well in predicting instances from each class.
 
 ### 7, Neural Network
 In this section, we employed a neural network (ANN) to address our problem. The neural network is inspired by biological neural networks in the human brain and consists of interconnected artificial neurons that process and learn from data.
