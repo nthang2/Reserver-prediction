@@ -180,15 +180,15 @@ The validation accuracy stabilizes after k = 4, with slight fluctuations in subs
 
 The following are the training and validation accuracies for different values of k:
 
-  For k = 1: Training Accuracy = 0.9929, Validation Accuracy = 0.8734
-  For k = 2: Training Accuracy = 0.9123, Validation Accuracy = 0.8236
-  For k = 3: Training Accuracy = 0.9156, Validation Accuracy = 0.8209
-  For k = 4: Training Accuracy = 0.8745, Validation Accuracy = 0.7975
-  For k = 5: Training Accuracy = 0.8722, Validation Accuracy = 0.7986
-  For k = 6: Training Accuracy = 0.8513, Validation Accuracy = 0.7865
-  For k = 7: Training Accuracy = 0.8493, Validation Accuracy = 0.7897
-  For k = 8: Training Accuracy = 0.8365, Validation Accuracy = 0.7802
-  For k = 9: Training Accuracy = 0.8342, Validation Accuracy = 0.7793
+For k = 1: Training Accuracy = 0.9929, Validation Accuracy = 0.8734
+For k = 2: Training Accuracy = 0.9123, Validation Accuracy = 0.8236
+For k = 3: Training Accuracy = 0.9156, Validation Accuracy = 0.8209
+For k = 4: Training Accuracy = 0.8745, Validation Accuracy = 0.7975
+For k = 5: Training Accuracy = 0.8722, Validation Accuracy = 0.7986
+For k = 6: Training Accuracy = 0.8513, Validation Accuracy = 0.7865
+For k = 7: Training Accuracy = 0.8493, Validation Accuracy = 0.7897
+For k = 8: Training Accuracy = 0.8365, Validation Accuracy = 0.7802
+For k = 9: Training Accuracy = 0.8342, Validation Accuracy = 0.7793
 
 ![Fig. 8](images/kn_matrix.png) 
 
@@ -200,7 +200,7 @@ Fig. 9: K-NN performance
 
 **NOTE**: reservation cancelled - denoted by class 0, not cancelled, denoted by class 1
 
-The precision, recall, and F1-score were calculated to evaluate the model's performance. The precision for class 0 was 0.80, indicating that 80% of the predictions for class 0 were correct. The precision for class 1 was 0.85, indicating that 85% of the predictions for class 1 were correct. The recall for class 0 was 0.86, indicating that 86% of the actual instances of class 0 were correctly predicted. The recall for class 1 was 0.78, indicating that 78% of the actual instances of class 1 were correctly predicted. The F1-score, which combines precision and recall, was 0.83 for class 0 and 0.81 for class 1. The overall accuracy of the model was 0.82, indicating that 82% of the predictionswere correct.
+The precision, recall, and F1-score were calculated to evaluate the model's performance. The precision for class 0 was 0.80, indicating that 80% of the predictions for class 0 were correct. The precision for class 1 was 0.85, indicating that 85% of the predictions for class 1 were correct. The recall for class 0 was 0.86, indicating that 86% of the actual instances of class 0 were correctly predicted. The recall for class 1 was 0.78, indicating that 78% of the actual instances of class 1 were correctly predicted. The F1-score, which combines precision and recall, was 0.83 for class 0 and 0.81 for class 1. The overall accuracy of the model was 0.82, indicating that 82% of the predictions were correct.
 
 Based on the results obtained, the model appears to perform reasonably well. After considering the training and validation accuracies, as well as the precision, recall, F1-score, and overall accuracy, a value of k = 3 was chosen for the K-Neighbors model. This value provides a good balance between performance and potential overfitting.
 
@@ -208,9 +208,21 @@ Based on the results obtained, the model appears to perform reasonably well. Aft
 
 ### 2, Naive Bayes - Gaussian Model
 
+![Fig. 10](images/gauss_smoothing.png) 
+
+Fig. 10: Naive Bayes - Gaussian Model loss/accuracy
+
 In this section, we implemented the Naive Bayes algorithm with a Gaussian model. After testing different parameters for priors and var_smoothing, we decided to use priors=[0.01,0.99] and var_smoothing = 1e-6.
 
 The model's accuracy on the training data was 0.748, while the accuracy on the test/validation data was 0.744. Comparing these accuracy scores, it seems that the model is not overfitting as the accuracy on the training data is relatively similar to the accuracy on the test/validation data.
+
+![Fig. 11](images/gauss_matrix.png) 
+
+Fig. 11: Confusion matrix
+
+![Fig. 12](images/gauss_perf.png) 
+
+Fig. 12: Performace
 
 Regarding the metrics, we evaluated the model's performance for each class as well as an overall average (macro avg and weighted avg) across all classes. The precision, recall, and F1-score were relatively similar for both classes, indicating a balanced performance. However, the overall accuracy of 0.74 suggests that the model is correctly predicting approximately 74% of the instances in the dataset.
 
