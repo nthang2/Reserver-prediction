@@ -136,6 +136,7 @@ Categorical variables in the dataset are encoded into numeric form using the Lab
 As the dataset may have imbalanced classes, where one class has significantly more instances than the others, we apply oversampling using the RandomOverSampler from the imbalanced-learn library. This technique increases the number of instances in the minority class to achieve a balanced representation.
 
 ![Fig. 7](images/balanced_status.png) 
+
 Fig.7: Post-balancing booking statuses
 
 - **Data Scaling**:
