@@ -168,6 +168,10 @@ In this implementation, the K-Neighbors model was used to classify the data. The
 
 To ensure optimal performance on unseen data, we evaluate the model's performance using the cross-validation technique.
 
+![Fig. 7](images/loss_acc.png) 
+
+Fig. 7: Loss/accuracy for different values of k
+
 As the value of k increases, both the training accuracy and validation accuracy tend to decrease slightly. This can be attributed to the fact that increasing the number of neighbors introduces more noise or mislabeled points from the training set, affecting the model's performance.
 
 The model achieved the highest training accuracy of 0.9929 for k = 1. However, the validation accuracy for this value of k is slightly lower at 0.8734, indicating a possible overfitting situation. Overfitting occurs when a model performs exceptionally well on the training dataset but struggles to generalize to unseen data.
@@ -186,13 +190,13 @@ The following are the training and validation accuracies for different values of
   For k = 8: Training Accuracy = 0.8365, Validation Accuracy = 0.7802
   For k = 9: Training Accuracy = 0.8342, Validation Accuracy = 0.7793
 
-![Fig. 7](images/kn_matrix.png) 
+![Fig. 8](images/kn_matrix.png) 
 
-Fig. 7: K-NN Confusion matrix
+Fig. 8: K-NN Confusion matrix
 
-![Fig. 8](images/knn_result.png) 
+![Fig. 9](images/knn_result.png) 
 
-Fig. 8: K-NN performance
+Fig. 9: K-NN performance
 
 **NOTE**: reservation cancelled - denoted by class 0, not cancelled, denoted by class 1
 
@@ -201,6 +205,22 @@ The precision, recall, and F1-score were calculated to evaluate the model's perf
 Based on the results obtained, the model appears to perform reasonably well. After considering the training and validation accuracies, as well as the precision, recall, F1-score, and overall accuracy, a value of k = 3 was chosen for the K-Neighbors model. This value provides a good balance between performance and potential overfitting.
 
 ***Overall accuracy : 82%***
+
+### 2, Naive Bayes - Gaussian Model
+
+In this section, we implemented the Naive Bayes algorithm with a Gaussian model. After testing different parameters for priors and var_smoothing, we decided to use priors=[0.01,0.99] and var_smoothing = 1e-6.
+
+The model's accuracy on the training data was 0.748, while the accuracy on the test/validation data was 0.744. Comparing these accuracy scores, it seems that the model is not overfitting as the accuracy on the training data is relatively similar to the accuracy on the test/validation data.
+
+Regarding the metrics, we evaluated the model's performance for each class as well as an overall average (macro avg and weighted avg) across all classes. The precision, recall, and F1-score were relatively similar for both classes, indicating a balanced performance. However, the overall accuracy of 0.74 suggests that the model is correctly predicting approximately 74% of the instances in the dataset.
+
+To further explain the metrics, precision is the proportion of true positive predictions out of all positive predictions. For class 0, the precision is 0.76, indicating that 76% of the predictions for class 0 were correct. For class 1, the precision is 0.73, indicating that 73% of the predictions for class 1 were correct.
+
+Recall is the proportion of true positive predictions out of all actual positive instances. For class 0, the recall is 0.71, indicating that 71% of the actual instances of class 0 were correctly predicted. For class 1, the recall is 0.78, indicating that 78% of the actual instances of class 1 were correctly predicted.
+
+The F1-score is a measure that combines both precision and recall into a single metric. For class 0, the F1-score is 0.73, which is the harmonic mean of precision and recall. For class 1, the F1-score is 0.75.
+
+Finally, the overall accuracy of the model is 0.74, indicating that 74% of the predictions overall were correct. We encountered no major complications during the implementation, but we developed some functions to help clean and preprocess the data before feeding it into the model.
 
 ## 3.3 Refinement
 
