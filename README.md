@@ -256,6 +256,36 @@ We evaluated the model's performance using various metrics, including precision,
 
 ***Overall accuracy : 91%***
 
+### 4, Radom forest
+
+In this section, we implemented the Random Forest algorithm, which is an ensemble learning method based on decision trees. Random Forest combines multiple decision trees and aggregates their predictions to make final decisions. This ensemble approach helps to improve the model's generalization and reduce overfitting.
+
+![Fig. 16](images/forest_hyper.png) 
+
+Fig. 16: Random Forest Hyperparameters
+
+We experimented with different hyperparameters to find the optimal configuration for our dataset. The hyperparameters we considered include the number of trees (n_estimators), the minimum number of samples required to split an internal node (min_samples_split), the maximum depth of the trees (max_depth), the criterion to measure the quality of a split (criterion), and the random seed (random_state).
+
+After thorough experimentation, we determined that the best configuration for our dataset is as follows: n_estimators=100, min_samples_split=3, max_depth=30, criterion='gini', and random_state=0. These hyperparameters provided the best results in terms of overall accuracy and balanced performance across both classes.
+
+The Random Forest model achieved an accuracy of 94% on the test/validation data. This high accuracy indicates that the model performs well in predicting the target variable for unseen instances.
+
+![Fig. 17](images/forest_perf.png) 
+
+Fig. 17: Confusion matrix
+
+![Fig. 18](images/forest_perf.png) 
+
+Fig. 18: Performance
+
+We evaluated the model's performance using various metrics, including precision, recall, and F1-score, for each class. The F1-scores for both classes were 0.94, indicating high performance in predicting instances from each class. The precision and recall scores were also balanced, further supporting the model's effectiveness in capturing instances from both classes.
+
+The Random Forest algorithm produces such results due to its ability to leverage the diversity of multiple decision trees. By combining predictions from different trees and considering a variety of features and thresholds, Random Forest can capture complex relationships within the data and make accurate predictions. Furthermore, the randomness introduced in the training process, such as bootstrap sampling and feature subsampling, helps to reduce overfitting and improve the model's generalization capability, which are applied by default in the skit-learn library.
+
+This model demonstrates excellent accuracy, balanced performance across both classes, and robustness against overfitting.
+
+***Overall accuracy : 94%***
+
 ### 7, Neural Network
 In this section, we employed a neural network (ANN) to address our problem. The neural network is inspired by biological neural networks in the human brain and consists of interconnected artificial neurons that process and learn from data.
 
