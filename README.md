@@ -131,7 +131,11 @@ To evaluate the performance of our models in predicting hotel reservation cancel
 
 We employed the scikit-learn library to calculate the accuracy score and create a confusion matrix for evaluating the models. The accuracy score measures the proportion of correctly predicted cancellations or non-cancellations out of the total predictions. It provides an overall assessment of the model's predictive accuracy.
 
-Additionally, we utilized a confusion matrix to gain a more detailed understanding of the model's performance. The confusion matrix presents a tabular representation of predicted and actual classes, showing the true positive, true negative, false positive , and false negative values. This matrix allows us to calculate various evaluation metrics such as precision, recall, and F1 score and determine which model excels at predicting hotel reservation cancellations, where **precision** is the proportion of true positive predictions out of all positive predictions, **recall** is the proportion of true positive predictions out of all actual positive instances and **F1 score** is a measure that combines both precision and recall into a single metric.
+The confusion matrix was utilized to gain a more detailed understanding of the model's performance. It presents a tabular representation of predicted and actual classes, showing the true positive, true negative, false positive , and false negative values. 
+
+This matrix allows us to calculate various evaluation metrics such as precision, recall, and F1 score and determine which model excels at predicting hotel reservation cancellations, where **precision** is the proportion of true positive predictions out of all positive predictions, **recall** is the proportion of true positive predictions out of all actual positive instances and **F1 score** is a measure that combines both precision and recall into a single metric.
+
+To assess the overall perfomace, we also used **Macro Average**, which calculates the average performance across all classes without considering the class imbalance, treating regardless of their size or distribution, and **Weighted Average**, which calculates the average performance across all classes, taking into account the class imbalance, giveing more weight to the metrics of classes with a larger number of samples, reflecting their relative importance.
 
 # 3. Methodology
 
@@ -159,6 +163,8 @@ To ensure that all features are on a similar scale and prevent any particular fe
 The preprocessed data is split into training and testing sets using the train_test_split function from the scikit-learn library. We allocate 30% of the data for testing, while the remaining 70% is used for training the machine learning models.
 
 ## 3.2 Implementation
+
+**NOTE**: reservation cancelled - denoted by class 0, not cancelled, denoted by class 1
 
 ### 1, K-NN
 
@@ -195,8 +201,6 @@ Fig. 8: K-NN Confusion matrix
 ![Fig. 9](images/knn_result.png) 
 
 Fig. 9: K-NN performance
-
-**NOTE**: reservation cancelled - denoted by class 0, not cancelled, denoted by class 1
 
 Based on the results obtained, the model appears to perform reasonably well. After considering the training and validation accuracies, as well as the precision, recall, F1-score, and overall accuracy, a value of k = 3 was chosen for the K-Neighbors model. This value provides a good balance between performance and potential overfitting.
 
@@ -249,6 +253,8 @@ Fig. 14: Confusion matrix
 Fig. 15: Performance
 
 We evaluated the model's performance using various metrics, including precision, recall, and F1-score, for each class, as well as macro average and weighted average across all classes. The macro average and weighted average F1-scores were both 0.91, indicating consistent performance across classes and accounting for class imbalances. The precision and recall scores were also balanced for both classes, suggesting that the model performs well in predicting instances from each class.
+
+***Overall accuracy : 91%***
 
 ### 7, Neural Network
 In this section, we employed a neural network (ANN) to address our problem. The neural network is inspired by biological neural networks in the human brain and consists of interconnected artificial neurons that process and learn from data.
