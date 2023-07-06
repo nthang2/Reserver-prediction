@@ -186,7 +186,7 @@ The following are the training and validation accuracies for different values of
   For k = 8: Training Accuracy = 0.8365, Validation Accuracy = 0.7802
   For k = 9: Training Accuracy = 0.8342, Validation Accuracy = 0.7793
 
-![Fig. 7](images/knn_matix.png) 
+![Fig. 7](images/kn_matrix.png) 
 
 Fig. 7: K-NN Confusion matrix
 
