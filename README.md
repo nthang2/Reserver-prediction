@@ -1,8 +1,3 @@
-# Thành viên
-- | Nguyễn Huy Hoàng | 20214959 | 
-- | Nguyễn Nhật Minh | 20210582 | 
-- |Bùi Nguyễn Quang Huy| 20210436 |
-
 # 1. Introduction
 
 ## 1.1 Background
@@ -388,3 +383,8 @@ Regarding the machine learning models, we encountered an imbalance in the classe
 In terms of the most important variables for our machine learning models, the lead_time variable proved to be the most influential, followed by average room price and the number of special requests. This finding aligns with our earlier suspicions and is further validated by our data analysis
 
 ![end](images/end_table.png) 
+
+# Phân công công việc
+- Nguyễn Huy Hoàng     - 20214959 | Dataset finding, data analysis, data preparation, model training + evaluation
+- Nguyễn Nhật Minh     - 20210582 | Report + QA 
+- Bùi Nguyễn Quang Huy - 20210436 | Slides
