@@ -386,5 +386,5 @@ In terms of the most important variables for our machine learning models, the le
 
 # Phân công công việc
 - Nguyễn Huy Hoàng     - 20214959 | Dataset finding, data analysis, data preparation, model training + evaluation
-- Nguyễn Nhật Minh     - 20210582 | Report + QA 
-- Bùi Nguyễn Quang Huy - 20210436 | Slides
+- Nguyễn Nhật Minh     - 20210582 | Report + QA, Naive Bayes
+- Bùi Nguyễn Quang Huy - 20210436 | Slides, K-nn
