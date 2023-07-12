@@ -76,16 +76,14 @@ By examining the relationship between categorical variables and the likelihood o
 
 ![Fig. 5](images/bivariate%20analysis.png) 
 ![Fig. 5](images/bivariate%20analysis%202.png)
-![Fig. 5](images/bivariate%20analysis%203.png) 
-![Fig. 5](images/bivariate%20analysis%204.png) 
-![Fig. 5](images/bivariate%20analysis%205.png)
-![Fig. 5](images/bivariate%20analysis%206.png) 
-
-Fig. 5: Booking preferences and cancellation
 
 - **Parking Space and Previous Stay**: Guests who request a parking space or have stayed previously at the hotel are less likely to cancel their reservations.
 
 - **Special Requests**: Guests who request special requests are also less likely to cancel. Moreover, as the number of special requests increases, the likelihood of cancellation decreases.
+
+![Fig. 5](images/bivariate%20analysis%203.png) 
+![Fig. 5](images/bivariate%20analysis%204.png) 
+![Fig. 5](images/bivariate%20analysis%205.png)
 
 - **Lead Time**: The lead time, or the time between booking and check-in, shows a consistent relationship with the likelihood of cancellation across various categorical variables:
   - Guests requesting a parking space or those who have stayed before tend to have shorter lead times.
@@ -94,6 +92,8 @@ Fig. 5: Booking preferences and cancellation
   - Different room types have varying lead times.
   - As the number of special requests increases, the lead time tends to decrease.
   - Guests who are already familiar with the hotel tend to have lower lead times.
+ 
+![Fig. 5](images/bivariate%20analysis%206.png)
 
 - **Cancellations and Room Prices**: Higher-priced rooms tend to have a higher number of cancellations, and this pattern remains consistent throughout the year.
 
