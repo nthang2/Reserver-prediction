@@ -384,7 +384,36 @@ In terms of the most important variables for our machine learning models, the le
 
 ![end](images/end_table.png) 
 
+# Strategy recommendations
+
+Using our model, the hotel can reliably predict whether or not a future booking will be cancelled so that resource can be allocated accordingly. Additionally, based on the analyzed data, we present a range of optimization strategies, encompassing the following key areas:
+
+1. Pricing and Booking:
+- Focus on attracting guests who book for shorter durations, as they are less likely to cancel.
+- Offer competitive prices for rooms with a maximum price of around 100 euros, as this seems to be the average price preferred by guests.
+- Encourage guests to book directly through the hotel's online platform to increase online bookings.
+- Provide incentives for guests to make early reservations, as longer lead times are associated with a higher cancellation rate.
+- Create promotional offers or packages for guests who choose meal_plan_1, as it is the most commonly selected option.
+
+2. Guest Preferences:
+- Enhance the guest experience for those requesting a car parking space, as they typically have shorter lead times and may be more likely to choose your hotel.
+- Provide personalized services or loyalty programs for guests who have stayed at the hotel before, as they tend to have lower cancellation rates.
+- Pay attention to guests who have special requests, as they are less likely to cancel. Offer special amenities or services to accommodate these requests.
+- Promote room types 1 and 4, as they are the most booked room types.
+
+3. Seasonal Patterns:
+- Adjust staffing levels and resources to meet the increased demand during the months from January to October when the number of bookings rises.
+- Develop special offers or promotions during the months of November and December to attract more guests and counter the drop in bookings during that period.
+
+4. Analytics and Optimization:
+- Continuously monitor and analyze the lead time variable to predict and reduce cancellations.
+- Explore further insights from the dataset to identify other factors that influence cancellations and adapt strategies accordingly.
+- Consider implementing dynamic pricing strategies based on lead time and room type to maximize revenue and minimize cancellations.
+
 # Phân công công việc
-- Nguyễn Huy Hoàng     - 20214959 | Dataset finding, data analysis, data preparation, model training + evaluation
-- Nguyễn Nhật Minh     - 20210582 | Report + QA, Naive Bayes
-- Bùi Nguyễn Quang Huy - 20210436 | Slides, K-nn
+- Nguyễn Huy Hoàng | Dataset finding, data analysis, data preparation, model training + evaluation
+- Nguyễn Nhật Minh | Report + QA, Naive Bayes
+- Bùi Nguyễn Quang Huy | Slides, K-nn
+- Nguyễn Đức Thắng | Random Forest
+- Nguyễn Viết Quý Anh | Decision Tree
+- Nguyễn Quang Hưng | Extra Trees
